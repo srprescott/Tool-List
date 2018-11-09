@@ -10,35 +10,26 @@
         
         <script>
             
+            http://jsfiddle.net/dY372/
+            https://stackoverflow.com/questions/23175006/how-to-check-multiple-checkboxes-with-javascript
             
-            
-            
-            function boxOne(){
+            function boxChecked(){
                 
-                var text = document.getElementById("text-moved").innerHTML;
+                var link = document.getElementById("change").innerHTML;
+                
                 var checkBox = document.getElementById("check");
                 
-                
-                if (checkBox.checked == true){
-                    document.getElementById("list").innerHTML = text;
+                if (checkBox.checked === true){
+                    
+                    var tools = [];
+                    
+                    tools.push(link);
+
+                document.getElementById("list").innerHTML = tools;
+                    
                 } else if (checkBox.checked == false) {
-                    document.getElementById("list").innerHTML = " ";
+                    document.getElementById("list").innerHTML = ' ';
                 }
-                
-            }
-            
-            function boxTwo(){
-                
-                var text = document.getElementById("text-moved-two").innerHTML;
-                var checkBox = document.getElementById("check-two");
-                
-                
-                if (checkBox.checked == true){
-                    document.getElementById("list").innerHTML = text;
-                } else if (checkBox.checked == false) {
-                    document.getElementById("list").innerHTML = " ";
-                }
-                
             }
         
             
@@ -51,18 +42,18 @@
                 
     
     <div class="container-fluid">  
-        <section class="one" id="tools">
+        <section class="ugh" id="tools">
             <table>
                  <tr>
-                    <td><input type="checkbox" id="check" onclick="boxOne()"></td>
+                    <td><input type="checkbox" id="check" onclick="boxChecked()"></td>
                     <td>1.	Impact driver (2) </td>
-                    <td id="text-moved" name="item[]">https://www.homedepot.com/p/DEWALT-20-Volt-MAX-Lithium-Ion-Cordless-1-4-in-Impact-Driver-Tool-Only-DCF885B/203164227</td>
+                    <td id="change">https://www.homedepot.com/p/DEWALT-20-Volt-MAX-Lithium-Ion-Cordless-1-4-in-Impact-Driver-Tool-Only-DCF885B/203164227</td>
                 </tr>
                 
                 <tr>
-                    <td><input type="checkbox" id="check-two" onclick="boxTwo()"></td>
+                    <td><input type="checkbox" id="check" onclick="boxChecked()"></td>
                     <td>2.	Drill </td>
-                    <td id="text-moved-two" name="item[]">https://www.homedepot.com/p/DEWALT-20-Volt-MAX-Lithium-Ion-Cordless-1-2-in-Hammer-Drill-Drill-Driver-Tool-Only-DCD985B/203316385</td>
+                    <td id="change">https://www.homedepot.com/p/DEWALT-20-Volt-MAX-Lithium-Ion-Cordless-1-2-in-Hammer-Drill-Drill-Driver-Tool-Only-DCD985B/203316385</td>
                 </tr>
                 
             </table>
@@ -74,26 +65,7 @@
             
         </section>
         
-        
-        <!-- var list = [];
-            
-            document.getElementById("text-moved").innerHTML = list; -->
-        
-        
     </div>
-    
-    
-    
-    
-        
-        
-        
-        
-    <footer>
-        <div class="footer">
-            <p class="ackn">Copyright 2018 Example Pet Rescue. Designed and Developed by <a href="http://www.prescottdev.com" class="link">Prescott Web Development</a></p>
-        </div>
-    </footer>
        
              
         
