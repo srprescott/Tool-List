@@ -11,7 +11,7 @@
         <script>
             
             
-            
+            /*
             function boxChecked(){
                 
                 var link = document.getElementById("change").innerHTML;
@@ -30,6 +30,18 @@
                     document.getElementById("list").innerHTML = ' ';
                 }
             }
+            */
+            
+            
+            
+            var section = document.getElementById("list");
+            var firsttd = document.querySelectorAll("table tr td:first-child");
+            firsttd.forEach(function(item) {
+                item.addEventListener("click", function() {
+                    section.innerHTML += this.parentElement.lastElementChild.innerHTML;
+                    section.innerHTML += "<br>";
+                });
+            });
         
             
         </script>
